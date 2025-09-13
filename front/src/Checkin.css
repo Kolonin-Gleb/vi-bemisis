@@ -1,0 +1,198 @@
+.checkin-root {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.checkin-header {
+  background: #111;
+  color: #fff;
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkin-logo {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.checkin-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkin-username {
+  color: #e79cff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.checkin-usericon svg {
+  display: block;
+  stroke: #e79cff;
+}
+
+.checkin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 24px;
+}
+
+.checkin-back {
+  position: absolute;
+  left: 48px;
+  top: 0;
+  background: #ddd;
+  border: none;
+  font-size: 2rem;
+  color: #444;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkin-back:hover {
+  background: #ccc;
+}
+
+.checkin-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #39313d;
+  margin-bottom: 36px;
+  margin-top: 0;
+}
+
+.checkin-btn {
+  background: #e79cff;
+  color: #222;
+  border: none;
+  border-radius: 24px;
+  padding: 48px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 60vw;
+  max-width: 600px;
+  min-width: 220px;
+  margin-bottom: 32px;
+  transition: filter 0.2s;
+  box-shadow: 0 2px 12px #0001;
+}
+.checkin-btn:hover {
+  filter: brightness(0.97);
+}
+
+.checkin-progress {
+  background: #e79cff;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 48px 24px 48px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.checkin-progress-left,
+.checkin-progress-right {
+  min-width: 220px;
+}
+
+.checkin-progress-left b,
+.checkin-progress-right b {
+  font-size: 1.13rem;
+}
+
+.checkin-progress-left ul,
+.checkin-progress-right ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+
+.checkin-progress-left li,
+.checkin-progress-right li {
+  margin-bottom: 6px;
+}
+
+.checkin-progress-left a,
+.checkin-progress-right a {
+  color: #39313d;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.checkin-progress-left a:hover,
+.checkin-progress-right a:hover {
+  color: #a259e6;
+}
+
+.checkin-footer {
+  min-height: 56px;
+  background: #c158f5;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.checkin-footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.checkin-footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  transition: filter 0.2s;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.checkin-footer-icons a:hover {
+  filter: brightness(1.2);
+  background: #fff2;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .checkin-header, .checkin-footer, .checkin-progress {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+  .checkin-btn {
+    width: 90vw;
+    max-width: 98vw;
+    min-width: 120px;
+    padding: 32px 0;
+  }
+  .checkin-back {
+    left: 2vw;
+  }
+  .checkin-progress {
+    flex-direction: column;
+    gap: 18px;
+    font-size: 1rem;
+  }
+}

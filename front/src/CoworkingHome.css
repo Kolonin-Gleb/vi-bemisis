@@ -236,3 +236,40 @@
     margin-top: 4px;
   }
 }
+
+/* --- Адаптация под 1920x1080 --- */
+@media (min-width: 1800px) and (min-height: 900px) {
+  .cw-main {
+    padding-top: 90px;
+  }
+  .cw-grid {
+    grid-template-columns: repeat(2, 540px);
+    grid-template-rows: repeat(2, 220px);
+    gap: 80px;
+  }
+  .cw-btn {
+    font-size: 2.1rem;
+    min-height: 80px;
+  }
+  .cw-desc {
+    font-size: 1.7rem;
+    margin-bottom: 64px;
+    margin-top: 40px;
+    max-width: 1100px;
+  }
+  .cw-desc-bold {
+    font-size: 2.1rem;
+  }
+  .cw-header, .cw-footer {
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 1.4rem;
+  }
+  .cw-logo {
+    font-size: 3.2rem;
+  }
+  .cw-footer {
+    font-size: 1.25rem;
+    min-height: 70px;
+  }
+}

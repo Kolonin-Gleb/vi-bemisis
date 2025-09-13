@@ -3,11 +3,13 @@ import './CoworkingHome.css'
 import Register from './Register'
 import Login from './Login'
 import Checkin from './Checkin'
+import Book from './Book'
 
 function CoworkingHome() {
   const [showRegister, setShowRegister] = useState(false)
   const [showLogin, setShowLogin] = useState(false)
   const [showCheckin, setShowCheckin] = useState(false)
+  const [showBook, setShowBook] = useState(false)
 
   if (showRegister) {
     return <Register onBack={() => setShowRegister(false)} />
@@ -17,6 +19,9 @@ function CoworkingHome() {
   }
   if (showCheckin) {
     return <Checkin onBack={() => setShowCheckin(false)} />
+  }
+  if (showBook) {
+    return <Book onBack={() => setShowBook(false)} />
   }
 
   return (
@@ -39,7 +44,7 @@ function CoworkingHome() {
           Место, где код пишется быстрее, а перерывы — вкуснее. Здесь ценят твой вклад — будь то гениальная строка кода или пакет печенья для друзей.
         </div>
         <div className="cw-grid">
-          <button className="cw-btn" onClick={() => setShowCheckin(true)}>Забронировать</button>
+          <button className="cw-btn" onClick={() => setShowBook(true)}>Забронировать</button>
           <button className="cw-btn" onClick={() => setShowCheckin(true)}>Отметиться</button>
           <button className="cw-btn">Анонс мероприятий</button>
           <button className="cw-btn">ТОП-донатеров</button>

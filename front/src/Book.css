@@ -1,0 +1,209 @@
+.book-root {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.book-header {
+  background: #111;
+  color: #fff;
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-logo {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.book-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.book-username {
+  color: #e79cff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.book-usericon svg {
+  display: block;
+  stroke: #e79cff;
+}
+
+.book-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 24px;
+}
+
+.book-back {
+  position: absolute;
+  left: 48px;
+  top: 0;
+  background: #ddd;
+  border: none;
+  font-size: 2rem;
+  color: #444;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book-back:hover {
+  background: #ccc;
+}
+
+.book-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #39313d;
+  margin-bottom: 36px;
+  margin-top: 0;
+}
+
+.book-btns {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.book-btn {
+  background: #e79cff;
+  color: #222;
+  border: 2px solid #c158f5;
+  border-radius: 20px;
+  padding: 48px 48px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 270px;
+  min-height: 140px;
+  transition: filter 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px #0001;
+  outline: none;
+}
+.book-btn:hover {
+  filter: brightness(0.97);
+  box-shadow: 0 4px 18px #e79cff55;
+}
+
+.book-progress {
+  background: #e79cff;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 48px 24px 48px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.book-progress-left,
+.book-progress-right {
+  min-width: 220px;
+}
+
+.book-progress-left b,
+.book-progress-right b {
+  font-size: 1.13rem;
+}
+
+.book-progress-left ul,
+.book-progress-right ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+
+.book-progress-left li,
+.book-progress-right li {
+  margin-bottom: 6px;
+}
+
+.book-progress-left a,
+.book-progress-right a {
+  color: #39313d;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.book-progress-left a:hover,
+.book-progress-right a:hover {
+  color: #a259e6;
+}
+
+.book-footer {
+  min-height: 56px;
+  background: #c158f5;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.book-footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.book-footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  transition: filter 0.2s;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.book-footer-icons a:hover {
+  filter: brightness(1.2);
+  background: #fff2;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .book-header, .book-footer, .book-progress {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+  .book-btns {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .book-btn {
+    min-width: 90vw;
+    padding: 32px 0;
+  }
+  .book-back {
+    left: 2vw;
+  }
+  .book-progress {
+    flex-direction: column;
+    gap: 18px;
+    font-size: 1rem;
+  }
+}
+

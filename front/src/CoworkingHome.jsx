@@ -1,14 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CoworkingHome.css'
+import Register from './Register'
+import Login from './Login'
+import Checkin from './Checkin'
+import Book from './Book'
 
 function CoworkingHome() {
+  const [showRegister, setShowRegister] = useState(false)
+  const [showLogin, setShowLogin] = useState(false)
+  const [showCheckin, setShowCheckin] = useState(false)
+  const [showBook, setShowBook] = useState(false)
+
+  if (showRegister) {
+    return <Register onBack={() => setShowRegister(false)} />
+  }
+  if (showLogin) {
+    return <Login onBack={() => setShowLogin(false)} />
+  }
+  if (showCheckin) {
+    return <Checkin onBack={() => setShowCheckin(false)} />
+  }
+  if (showBook) {
+    return <Book onBack={() => setShowBook(false)} />
+  }
+
   return (
     <div className="cw-root">
       <header className="cw-header">
         <span className="cw-logo">it.am</span>
         <div className="cw-auth">
-          <button className="cw-register">Зарегистрироваться</button>
-          <span className="cw-login-link">Войти</span>
+          <button className="cw-register" onClick={() => setShowRegister(true)}>
+            Зарегистрироваться
+          </button>
+          <span className="cw-login-link" onClick={() => setShowLogin(true)}>Войти</span>
         </div>
       </header>
       <main className="cw-main">
@@ -20,8 +44,8 @@ function CoworkingHome() {
           Место, где код пишется быстрее, а перерывы — вкуснее. Здесь ценят твой вклад — будь то гениальная строка кода или пакет печенья для друзей.
         </div>
         <div className="cw-grid">
-          <button className="cw-btn">Забронировать</button>
-          <button className="cw-btn">Отметиться</button>
+          <button className="cw-btn" onClick={() => setShowBook(true)}>Забронировать</button>
+          <button className="cw-btn" onClick={() => setShowCheckin(true)}>Отметиться</button>
           <button className="cw-btn">Анонс мероприятий</button>
           <button className="cw-btn">ТОП-донатеров</button>
         </div>
@@ -29,7 +53,7 @@ function CoworkingHome() {
       <footer className="cw-footer">
         <div className="cw-footer-left">
           <div>@MISIS_University 2025</div>
-          <div>@itatmisis</div>
+          <div>@itammisis</div>
         </div>
         <div className="cw-footer-right">
           <a href="https://vk.com" target="_blank" rel="noopener noreferrer" className="cw-footer-icon">

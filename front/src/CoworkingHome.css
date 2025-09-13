@@ -1,0 +1,238 @@
+.cw-root {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.cw-header {
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 48px 28px 48px;
+}
+
+.cw-logo {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cw-auth {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cw-register {
+  background: linear-gradient(90deg, #e879f9 0%, #38bdf8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: filter 0.2s;
+}
+.cw-register:hover {
+  filter: brightness(0.95);
+}
+
+.cw-login-link {
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.85;
+  margin-left: 4px;
+  transition: text-decoration 0.2s;
+}
+.cw-login-link:hover {
+  text-decoration: underline;
+}
+
+.cw-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32px 12px 0 12px;
+  position: relative;
+}
+
+.cw-desc {
+  text-align: center;
+  font-size: 1.35rem;
+  margin-bottom: 48px;
+  margin-top: 24px;
+  color: #444;
+  max-width: 800px;
+  line-height: 1.4;
+}
+
+.cw-desc-bold {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.cw-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 340px);
+  grid-template-rows: repeat(2, 140px);
+  gap: 38px;
+  margin-bottom: 32px;
+}
+
+.cw-btn {
+  background: linear-gradient(180deg, #e0aaff 0%, #a5d8ff 100%);
+  border: none;
+  border-radius: 28px;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #222;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #0001;
+  transition: transform 0.08s, box-shadow 0.2s;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cw-btn:hover, .cw-btn:focus {
+  box-shadow: 0 4px 18px #e879f955;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.cw-footer {
+  min-height: 56px;
+  background: #e0aaff;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.cw-footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #fff;
+  font-size: 1.05rem;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.cw-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cw-footer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  transition: filter 0.2s;
+}
+.cw-footer-icon:hover {
+  filter: brightness(1.2);
+}
+
+/* --- Адаптивность для больших экранов --- */
+@media (min-width: 1400px) {
+  .cw-main {
+    padding-top: 64px;
+  }
+  .cw-grid {
+    grid-template-columns: repeat(2, 420px);
+    grid-template-rows: repeat(2, 160px);
+    gap: 56px;
+  }
+  .cw-btn {
+    font-size: 1.7rem;
+  }
+}
+
+/* --- Уже существующие адаптивные стили --- */
+@media (max-width: 1200px) {
+  .cw-grid {
+    grid-template-columns: repeat(2, 260px);
+    grid-template-rows: repeat(2, 110px);
+    gap: 24px;
+  }
+  .cw-btn {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .cw-header, .cw-footer {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+  .cw-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 90px);
+    gap: 16px;
+    width: 100%;
+    justify-items: center;
+  }
+  .cw-btn {
+    width: 90vw;
+    max-width: 400px;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cw-header, .cw-footer {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .cw-main {
+    padding: 10px 2px 0 2px;
+  }
+  .cw-desc {
+    font-size: 1rem;
+    max-width: 98vw;
+  }
+  .cw-desc-bold {
+    font-size: 1.05rem;
+  }
+  .cw-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 70px);
+    gap: 10px;
+    width: 100%;
+  }
+  .cw-btn {
+    font-size: 1rem;
+    min-width: 120px;
+    padding: 0 8px;
+  }
+  .cw-logo {
+    font-size: 1.5rem;
+  }
+  .cw-footer {
+    font-size: 0.95rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-height: 70px;
+  }
+  .cw-footer-right {
+    margin-top: 4px;
+  }
+}
